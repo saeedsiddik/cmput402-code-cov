@@ -28,3 +28,10 @@ jobs:
 
     # TODO: Add Codecov (make sure to set up on codecov.io as well) 
     #       for test coverage reports
+    
+    - name: Run codecov report
+      env: 
+      	CODECOV_TOKEN: ${{ secrets.MY_CODECOV_TOKEN }}
+      run: |
+      	./gradlew jacocoTestReport
+      	bash <(curl -s https://codecov.io/bash)
