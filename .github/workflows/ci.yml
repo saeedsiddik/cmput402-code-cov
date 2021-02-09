@@ -30,9 +30,15 @@ jobs:
     #       for test coverage reports
     
     - name: Run codecov report
+<<<<<<< HEAD
 #    Need to add token for private repo
+=======
+>>>>>>> aba5244c7a18df540c4b8b80ce31f40c52742db9
 #       env: CODECOV_TOKEN:${{ Secrets.MY_CODECOV_TOKEN }}
       run: |
         ./gradlew jacocoTestReport 
         bash <(curl -s https://codecov.io/bash)
+<<<<<<< HEAD
 
+=======
+>>>>>>> aba5244c7a18df540c4b8b80ce31f40c52742db9
